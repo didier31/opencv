@@ -211,7 +211,6 @@ endif()
 # - CMAKE_COMPILE_FEATURES is used to detect what features are available by the compiler.
 # - CMAKE_CXX_STANDARD is used to detect what features are available in this configuration.
 if(NOT OPENCV_SKIP_CMAKE_CXX_STANDARD)
-<<<<<<< HEAD
   ocv_update(CMAKE_CXX_STANDARD 14)
   ocv_update(CMAKE_CXX_STANDARD_REQUIRED TRUE)
   ocv_update(CMAKE_CXX_EXTENSIONS OFF) # use -std=c++14 instead of -std=gnu++14
@@ -232,7 +231,6 @@ endif()
 
 if(NOT HAVE_CXX14)
   message(FATAL_ERROR "OpenCV 4.x requires C++14")
-=======
   if(DEFINED CMAKE_CXX_STANDARD AND ((CMAKE_CXX_STANDARD EQUAL 98) OR (CMAKE_CXX_STANDARD LESS 11)))
     message(FATAL_ERROR "OpenCV 4.x requires C++11, but your configuration does not enable(CMAKE_CXX_STANDARD=${CMAKE_CXX_STANDARD}).")
   endif()
